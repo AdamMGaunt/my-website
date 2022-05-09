@@ -1,4 +1,8 @@
+@import "~bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+// css folders
+@import "css/layout";
 
 .App {
   text-align: center;
@@ -37,8 +41,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Pacifico', cursive;
 }
