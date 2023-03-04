@@ -1,10 +1,12 @@
 import React, {Component } from 'react';
-import Button from 'react-bootstrap/Button';
+import Button from '@mui/material/Button';
 
 class MyButton extends Component {
     render() {
-        return <Button variant="primary">{props.name}</Button>;
+        return (
+            <Button variant={this.props.variant} size="medium">{this.props.name}</Button>
+        );
     }
 }
 
-export default Button
+export default MyButton

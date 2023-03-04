@@ -5,3 +5,30 @@ h1, h2, h3, h4, h5, h6 {
 .Appbar {
     background-color: #56CCF2;
 }
+
+.content-block {
+    min-height: 100vh;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #282c34;
+}
+.column {
+    padding: 1rem;
+    color: white;
+}
+.container {
+    display: flex;
+    margin: 1rem;
+}
+.card {
+    padding:0.5rem;
+}
+.card-header {
+    background-color: white;
+}
+.card-body {
+    text-align: left;
+}

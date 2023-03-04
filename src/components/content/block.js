@@ -1,12 +1,14 @@
 import React, {Component } from 'react';
+import MyCard from './card';
 
-class Footer extends React.Component {
+class Block extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
         error: null,
         isLoaded: true,
-        items: []
+        items: [],
+        cardContent: [("content block 1"),("content block 2"),("content block 3") ]
       };
     }
   
@@ -37,23 +39,14 @@ class Footer extends React.Component {
         return <div>Loading...</div>;
       } else {
         return (
-          <footer>
-              <div class="column">
-                <h5>Main Heading</h5>
-                <p>Content Block</p>
-              </div>
-              <div class="column">
-                <h5>Main Heading</h5>
-                <p>Content Block</p>
-              </div>
-              <div class="column">
-                <h5>Main Heading</h5>
-                <p>Content Block</p>
-              </div>
-          </footer>
+            <div className="container">
+                <MyCard heading="Card 1" cardContent={this.state.cardContent[0]} />
+                <MyCard heading="Card 2" cardContent={this.state.cardContent[1]} />
+                <MyCard heading="Card 3" cardContent={this.state.cardContent[2]} />
+            </div>
         );
       }
     }
   }
 
-  export default Footer
+  export default Block

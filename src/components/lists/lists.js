@@ -1,11 +1,11 @@
 import React, {Component } from 'react';
 
-class Footer extends React.Component {
+class MyComponent extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
         error: null,
-        isLoaded: true,
+        isLoaded: false,
         items: []
       };
     }
@@ -37,23 +37,16 @@ class Footer extends React.Component {
         return <div>Loading...</div>;
       } else {
         return (
-          <footer>
-              <div class="column">
-                <h5>Main Heading</h5>
-                <p>Content Block</p>
-              </div>
-              <div class="column">
-                <h5>Main Heading</h5>
-                <p>Content Block</p>
-              </div>
-              <div class="column">
-                <h5>Main Heading</h5>
-                <p>Content Block</p>
-              </div>
-          </footer>
+          <ul>
+            {items.map(item => (
+              <li key={item.id}>
+                {item.name} {item.price}
+              </li>
+            ))}
+          </ul>
         );
       }
     }
   }
 
-  export default Footer
+  export default MyComponent
