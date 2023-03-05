@@ -1,6 +1,25 @@
 import React, {Component } from 'react';
 import MyCard from './card';
 
+// add content here
+const Projects = [
+  {
+    heading: 'Project 1',
+    subheading: 'subheading',
+    bodyContent: 'this is the body content'
+  },
+  {
+    heading: 'Project 2',
+    subheading: 'subheading',
+    bodyContent: 'this is the body content'
+  },
+  {
+    heading: 'Project 3',
+    subheading: 'subheading',
+    bodyContent: 'this is the body content'
+  }
+];
+
 class Block extends React.Component {
     constructor(props) {
       super(props);
@@ -8,7 +27,7 @@ class Block extends React.Component {
         error: null,
         isLoaded: true,
         items: [],
-        cardContent: [("content block 1"),("content block 2"),("content block 3") ]
+        cardContent: Projects
       };
     }
   
@@ -40,9 +59,9 @@ class Block extends React.Component {
       } else {
         return (
             <div className="container">
-                <MyCard heading="Card 1" cardContent={this.state.cardContent[0]} />
-                <MyCard heading="Card 2" cardContent={this.state.cardContent[1]} />
-                <MyCard heading="Card 3" cardContent={this.state.cardContent[2]} />
+                <MyCard heading={this.state.cardContent[0].heading} cardContent={this.state.cardContent[0].bodyContent} />
+                <MyCard heading={this.state.cardContent[0].heading} cardContent={this.state.cardContent[1].bodyContent} />
+                <MyCard heading={this.state.cardContent[0].heading} cardContent={this.state.cardContent[2].bodyContent} />
             </div>
         );
       }

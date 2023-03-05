@@ -1,8 +1,29 @@
+.App-header {
+    background-color: #fff;
+    position: relative;
+    h1 {
+        z-index: 9;
+    }
+}
+.Colour-Bar {
+    position: absolute;
+    z-index: 1;
+    width: 200vw;
+    height: 200px;
+    transform: rotate(13deg);
+    background: -moz-linear-gradient(bottom, #F2C94C 0%, #F2C94C 33%, #F2994A 33%, #F2994A 66%, #56CCF2 66%, #56CCF2 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#F2C94C), color-stop(33%,#F2C94C), color-stop(33%,#F2994A), color-stop(66%,#F2994A), color-stop(66%,#56CCF2), color-stop(100%,#56CCF2));
+    background: -webkit-linear-gradient(bottom, #F2C94C 0%,#F2C94C 33%,#F2994A 33%,#F2994A 66%,#56CCF2 66%,#56CCF2 100%);
+    background: -o-linear-gradient(bottom, #F2C94C 0%,#F2C94C 33%,#F2994A 33%,#F2994A 66%,#56CCF2 66%,#56CCF2 100%);
+    background: -ms-linear-gradient(bottom, #F2C94C 0%,#F2C94C 33%,#F2994A 33%,#F2994A 66%,#56CCF2 66%,#56CCF2 100%);
+    background: linear-gradient(to bottom, #F2C94C 0%,#F2C94C 33%,#F2994A 33%,#F2994A 66%,#56CCF2 66%,#56CCF2 100%);
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Pacifico', cursive;
 }
 
-.Appbar {
+.css-hip9hq-MuiPaper-root-MuiAppBar-root {
     background-color: #56CCF2;
 }
 
@@ -12,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 
 footer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    // grid-template-columns: repeat(3, 1fr);
     background-color: #282c34;
 }
 .column {
@@ -21,10 +42,12 @@ footer {
 }
 .container {
     display: flex;
-    margin: 1rem;
+    width: 100%;
+    justify-content: center;
 }
 .card {
     padding:0.5rem;
+    width: 100%;
 }
 .card-header {
     background-color: white;

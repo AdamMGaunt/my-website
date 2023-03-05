@@ -39,16 +39,8 @@ class Footer extends React.Component {
         return (
           <footer>
               <div class="column">
-                <h5>Main Heading</h5>
-                <p>Content Block</p>
-              </div>
-              <div class="column">
-                <h5>Main Heading</h5>
-                <p>Content Block</p>
-              </div>
-              <div class="column">
-                <h5>Main Heading</h5>
-                <p>Content Block</p>
+                <h5>Designed & Developed</h5>
+                <p>Copyright Blind Munk Studios 2023</p>
               </div>
           </footer>
         );

@@ -8,6 +8,9 @@ import MyButton from './components/buttons/Button';
 import ContentBlock from './components/content/block';
 import Footer from './components/footer/footer';
 
+// Content
+import Projects from './content/Projects'
+
 
 function App() {
   
@@ -15,13 +18,10 @@ function App() {
     <div className="App">
       <MyAppbar/>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <h1>Blind Munk Studios</h1>
-        <p>A new version of my website is currently being created :)</p>
-        <p>And yes, it is going to be a React App.</p>
-        <MyButton name="I am a Button" variant="contained" />
+        <div className="Colour-Bar"></div>
       </header>
-      <ContentBlock />
+      <ContentBlock CardContent={Projects}/>
       <Footer />
     </div>
   );
