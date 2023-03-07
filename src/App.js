@@ -1,29 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
+// add react router to habdle navigation between pages
+// import { Route, Routes } from 'react-router-dom';
+import styled from 'styled-components';
+
+// constants
+import { MAIN_URL, PROJECTS_URL, ABOUT_URL, CONTACT_URL } from './constants/urls';
+
 import './App.scss';
-//import MyButton from './components/buttons/Button';
-import MyAppbar from './components/appbar/appbar';
-//import MyShoppingList from './components/lists/lists';
-//import MySortComponent from './components/sort';
-import MyButton from './components/buttons/Button';
-import ContentBlock from './components/content/block';
-import Footer from './components/footer/footer';
+
+// components
+import MyAppbar from './components/appbar';
+import ContentBlock from './components/block';
+import Footer from './components/footer';
+import { Section, Title } from './components/layout';
+import BaseLayout from './components/baseLayout';
 
 // Content
-import Projects from './content/Projects'
-
+// import { getCardContent } from './content/Projects'
 
 function App() {
   
   return (
-    <div className="App">
-      <MyAppbar/>
-      <header className="App-header">
-        <h1>Blind Munk Studios</h1>
-        <div className="Colour-Bar"></div>
-      </header>
-      <ContentBlock CardContent={Projects}/>
-      <Footer />
-    </div>
+    <BaseLayout content={<ContentBlock/>}>
+    </BaseLayout>
   );
 }
 

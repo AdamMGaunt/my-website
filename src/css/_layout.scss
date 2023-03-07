@@ -10,6 +10,9 @@
     z-index: 1;
     width: 200vw;
     height: 200px;
+    left: -25%;
+    top: 45vh;
+    overflow: hidden;
     transform: rotate(13deg);
     background: -moz-linear-gradient(bottom, #F2C94C 0%, #F2C94C 33%, #F2994A 33%, #F2994A 66%, #56CCF2 66%, #56CCF2 100%);
     background: -webkit-gradient(linear, left top, right top, color-stop(0%,#F2C94C), color-stop(33%,#F2C94C), color-stop(33%,#F2994A), color-stop(66%,#F2994A), color-stop(66%,#56CCF2), color-stop(100%,#56CCF2));
