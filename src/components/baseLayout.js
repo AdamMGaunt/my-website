@@ -1,11 +1,14 @@
-import { AppBar } from '@mui/material';
 import React, {Component } from 'react';
 import styled from 'styled-components';
 
 //components
 import MyAppbar from './appbar';
 import Footer from './footer';
+import ContentBlock from './block';
+import CTA from './cta';
 import { HeroSection, HeroTitle, ContentContainer } from './layout';
+
+import { Projects, CallToAction } from '../content/Projects';
 
 const AppContainer = styled.div`
     display:flex;
@@ -16,7 +19,8 @@ const AppContainer = styled.div`
 const heroSection = {
     name: 'Blind Munk Studios'
 }
-export default function BaseLayout( {content} ) {
+
+export default function BaseLayout() {
     return (
             <AppContainer>
                 <MyAppbar />
@@ -27,7 +31,14 @@ export default function BaseLayout( {content} ) {
                     </HeroTitle>
                 </HeroSection>
                 <ContentContainer>
-                    {content}
+                    <ContentBlock>
+                        {Projects}
+                    </ContentBlock>
+                </ContentContainer>
+                <ContentContainer>
+                    <CTA>
+                        {CallToAction}
+                    </CTA>
                 </ContentContainer>
                 <Footer />
             </AppContainer>

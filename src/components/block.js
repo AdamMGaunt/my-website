@@ -5,7 +5,7 @@ import MyCard from './card';
 import { Container, Section } from '../components/layout';
 
 //content
-import Projects from '../content/Projects';
+import { Projects } from '../content/Projects';
 
 
 // add content here

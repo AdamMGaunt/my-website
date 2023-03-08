@@ -16,12 +16,11 @@ import { Section, Title } from './components/layout';
 import BaseLayout from './components/baseLayout';
 
 // Content
-// import { getCardContent } from './content/Projects'
 
 function App() {
   
   return (
-    <BaseLayout content={<ContentBlock/>}>
+    <BaseLayout>
     </BaseLayout>
   );
 }

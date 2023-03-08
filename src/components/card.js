@@ -4,6 +4,7 @@ import styled from 'styled-components';
 // components
 import MoreButton from './Button';
 import { Card } from '../components/layout'
+// import CardImage from './image';
 
 const CardHeader = styled.h1`
     background-color: white;
@@ -20,6 +21,11 @@ const CardActions = styled.div`
     justify-content: center;
 `;
 
+const StyledImage = styled.div`
+    width: 100px;
+    height: 100px;
+`;
+
 class MyCard extends React.Component {
   
     render() {
@@ -29,7 +35,11 @@ class MyCard extends React.Component {
                     {this.props.content.heading}
                 </CardHeader>
                 <CardBody>
-                    {this.props.content.bodyContent}
+                    <StyledImage>
+                        <img width='100px' height='100px' src={this.props.content.imagePath} />
+                    </StyledImage>
+                    <p>{this.props.content.subheading}</p>
+                    <p>{this.props.content.bodyContent}</p>
                 </CardBody>
                 <CardActions>
                     <MoreButton name='more' variant="contained" />

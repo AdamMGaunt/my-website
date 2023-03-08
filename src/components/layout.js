@@ -7,6 +7,7 @@ export const ContentContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: 2rem;
 `;
 
 export const HeroSection = styled.div`
