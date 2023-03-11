@@ -69,13 +69,13 @@ class Block extends React.Component {
       } else {
         return (
             <Container>
-              <Section>
                 {
                   cardContent.map((project) => 
-                    <MyCard content={project} />
+                    <Section>
+                      <MyCard content={project} />
+                    </Section>
                   )
                 }
-              </Section>
             </Container>
         );
       }

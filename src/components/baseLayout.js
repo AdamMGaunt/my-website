@@ -2,7 +2,7 @@ import React, {Component } from 'react';
 import styled from 'styled-components';
 
 //components
-import MyAppbar from './appbar';
+// import MyAppbar from './appbar';
 import Footer from './footer';
 import ContentBlock from './block';
 import CTA from './cta';
@@ -23,7 +23,6 @@ const heroSection = {
 export default function BaseLayout() {
     return (
             <AppContainer>
-                <MyAppbar />
                 <HeroSection>
                     <div className="Colour-Bar"></div>
                     <HeroTitle>
