@@ -11,7 +11,7 @@ const StyledCTA = styled.div`
     padding: 0.5rem;
     justify-content: center;
     align-items: center;
-    background-color: #F2C94C;
+    background-color: #56CCF2;
     color: #fff;
     border-radius: 8px;
 `;

@@ -3,17 +3,27 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import styled from 'styled-components';
+
+const AppHeading = styled.div`
+  text-align: center;
+  font-family: pacifico;
+`;
+
+const MyAppbar = styled.div`
+  background-color: #56CCF2;
+`;
 
 export default function ButtonAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <MyAppbar position="static">
         <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <AppHeading variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Blind Munk Studios
-          </Typography>
+          </AppHeading>
         </Toolbar>
-      </AppBar>
+      </MyAppbar>
     </Box>
   );
 }

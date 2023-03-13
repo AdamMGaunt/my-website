@@ -6,8 +6,11 @@ import styled from 'styled-components';
 export const ContentContainer = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 100%;
     padding: 2rem;
+    margin-top: 80px;
+    margin-bottom: 80px;
 `;
 
 export const HeroSection = styled.div`
