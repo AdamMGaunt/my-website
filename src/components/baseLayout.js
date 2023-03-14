@@ -38,6 +38,10 @@ const LeftSection = styled.div`
     display: flex;
     justify-content: center;
     text-align: left;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        text-align: center;
+    }
 `;
 
 const LeftSectionBody = styled.div`

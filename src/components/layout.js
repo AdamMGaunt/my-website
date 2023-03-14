@@ -14,7 +14,7 @@ export const ContentContainer = styled.div`
 `;
 
 export const HeroSection = styled.div`
-    min-height: 100vh;
+    min-height: calc(100vh - 64px);
     width: 100%;
     overflow: hidden;
     background-color: #fff;
@@ -40,6 +40,9 @@ export const Container = styled.div`
     display: flex;
     width: 100%;
     justify-content: center;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 `;
 
 export const Card = styled.div`
