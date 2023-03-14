@@ -6,10 +6,7 @@ import MoreButton from './Button';
 import { Card } from '../components/layout'
 import CardImage from './image';
 
-// Content
-const ReactLogo = 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/logo192.png';
-
-const CardHeader = styled.h1`
+const CardHeader = styled.h2`
     background-color: white;
     text-align: center;
 `;
@@ -33,7 +30,7 @@ class MyCard extends React.Component {
                     {this.props.content.heading}
                 </CardHeader>
                 <CardBody>
-                    <CardImage path={ReactLogo} />
+                    <CardImage path={this.props.content.imagePath} />
                     <p>{this.props.content.subheading}</p>
                     <p>{this.props.content.bodyContent}</p>
                 </CardBody>

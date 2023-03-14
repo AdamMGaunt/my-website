@@ -8,6 +8,7 @@ import styled from 'styled-components';
 const AppHeading = styled.div`
   text-align: center;
   font-family: pacifico;
+  color: #ffffff;
 `;
 
 const MyAppbar = styled.div`

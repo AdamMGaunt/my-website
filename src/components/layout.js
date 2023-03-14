@@ -22,9 +22,15 @@ export const HeroSection = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 `;
 
 export const HeroTitle = styled.h1`
+    text-align: center;
+    z-index: 9;
+`;
+export const HeroSubheading = styled.h4`
+    text-align: center;
     z-index: 9;
 `;
 
@@ -58,4 +64,31 @@ export const Card = styled.div`
 export const Title = styled.h1 `
     background-color: #ffffff;
     text-align: center;
+`;
+
+export const CenterSection = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+`;
+    
+export const CenterSectionBody = styled.div`
+    margin-left: 3rem;
+    margin-right: 3rem;
+`;
+
+export const LeftSection = styled.div`
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        text-align: center;
+    }
+`;
+
+export const LeftSectionBody = styled.div`
+    margin-left: 3rem;
+    margin-right: 3rem;
 `;

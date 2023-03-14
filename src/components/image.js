@@ -11,7 +11,7 @@ const StyledImage = styled.div`
 export default function CardImage( { path } ) {
     return (
         <StyledImage>
-            <img src={path} />
+            <img width='100%' src={path} />
         </StyledImage>
     )
 };

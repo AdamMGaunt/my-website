@@ -11,7 +11,7 @@
     width: 200vw;
     height: 200px;
     left: -25%;
-    top: 45vh;
+    top: calc(45vh - 64px);
     overflow: hidden;
     transform: rotate(13deg);
     background: -moz-linear-gradient(bottom, #F2C94C 0%, #F2C94C 33%, #F2994A 33%, #F2994A 66%, #56CCF2 66%, #56CCF2 100%);
