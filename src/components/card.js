@@ -7,7 +7,7 @@ import { Card } from '../components/layout'
 import CardImage from './image';
 
 // Content
-import Logo from '../images/logo192.png';
+const ReactLogo = 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/logo192.png';
 
 const CardHeader = styled.h1`
     background-color: white;
@@ -33,7 +33,7 @@ class MyCard extends React.Component {
                     {this.props.content.heading}
                 </CardHeader>
                 <CardBody>
-                    <CardImage path={Logo} />
+                    <CardImage path={ReactLogo} />
                     <p>{this.props.content.subheading}</p>
                     <p>{this.props.content.bodyContent}</p>
                 </CardBody>
