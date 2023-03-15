@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import styled from 'styled-components';
+import { Outlet, Link } from 'react-router-dom';
 
 const AppHeading = styled.div`
   text-align: center;
@@ -23,6 +24,9 @@ export default function ButtonAppBar() {
           <AppHeading variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Blind Munk Studios
           </AppHeading>
+          {/* <Link to={`/`}>home</Link> */}
+          {/* <Link to={`projects`}>projects</Link> */}
+          <Outlet />
         </Toolbar>
       </MyAppbar>
     </Box>

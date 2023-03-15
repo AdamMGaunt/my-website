@@ -1,23 +1,15 @@
 import React, {Component } from 'react';
-import styled from 'styled-components';
+import { Outlet, Link } from 'react-router-dom';
+// import styled from 'styled-components';
+import BaseLayout from '../components/baseLayout';
+import MyAppbar from '../components/appbar';
 
-//components
-import { Section, Title } from './components/layout';
-
-const MainPage = {
-    render () {
-        return (
-            <div>
-                <Title className="App-header">
-                    <h1>Blind Munk Studios</h1>
-                    <div className="Colour-Bar"></div>
-                </Title>
-                <Section>
-                    <ContentBlock />
-                </Section>
-            </div>
+export default function MainPage() {
+    return (
+        <>
+            <BaseLayout>
+                <MyAppbar />
+            </BaseLayout>
+        </>
         )
-    }
 };
-
-export default MainPage;
