@@ -2,7 +2,7 @@ import React, { Children } from 'react';
 // add react router to habdle navigation between pages
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainPage from './pages/main';
-import ErrorPage from './error-page';
+import ErrorPage from './pages/error-page';
 import ProjectsPage from './pages/projects';
 
 // constants
