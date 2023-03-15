@@ -13,19 +13,19 @@ export const Projects = [
     {
         heading: 'Logistics Management Web Application',
         subheading: 'UX Design & UI Development',
-        bodyContent: "Figma, ACS, Blazor, Typescript, Azure DevOPS",
+        caption: "Figma, ACS, Blazor, Typescript, Azure DevOPS",
         imagePath: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/logistics.jpg'
     },
     {
         heading: 'Pipeline Triage Application',
         subheading: 'UI Development',
-        bodyContent: "Angular, Typescript, Azure DevOPS",
+        caption: "Angular, Typescript, Azure DevOPS",
         imagePath: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/security.jpg'
     },
     {
         heading: 'Pipeline Flow Management Application',
         subheading: 'UX Design',
-        bodyContent: "Figma, ACS, React",
+        caption: "Figma, ACS, React",
         imagePath: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/monitoring.jpg'
     }
 ];

@@ -32,7 +32,7 @@ class MyCard extends React.Component {
                 <CardBody>
                     <CardImage path={this.props.content.imagePath} />
                     <p>{this.props.content.subheading}</p>
-                    <p>{this.props.content.bodyContent}</p>
+                    <p>{this.props.content.caption}</p>
                 </CardBody>
                 <CardActions>
                     <MoreButton name='more' variant="contained" />
