@@ -1,12 +1,13 @@
 
-// type ProjectT = {
-//     heading: String;
-//     subheading: String;
-//     bodyContent: String;
-// };
-// type CardContentT = {
-//     projects: ProjectT[];
-// }
+type ProjectT = {
+    heading: String;
+    subheading: String;
+    caption: String;
+    imagePath: String;
+};
+type CardContentT = {
+    projects: ProjectT[];
+}
 
 
 export const Projects = [
@@ -35,5 +36,3 @@ export const CallToAction = {
     body: 'let me know what you think',
     button: 'Contact me'
 }
-
-export default {Projects, CallToAction};
