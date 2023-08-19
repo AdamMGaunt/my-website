@@ -9,6 +9,9 @@ import {
     CenterSectionBody, 
 } from '../components/layout';
 
+// Content
+import { UXContent } from '../content/Projects';
+
 const StyledImage = styled.div`
     width: 100%;    
     height: auto;
@@ -25,6 +28,31 @@ const StyledOrderedList = styled.ol`
     text-align: left;
 `;
 
+const FeatureList = styled.div`
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`;
+
+const FeatureItem = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px;
+    margin: 1rem;
+`;
+
+const FeatureHeading = styled.div`
+    text-align: center;
+`;
+
+const FeatureBody = styled.div`
+    text-align: center;
+    max-width: 500px;
+`;
+
 const MainPage: React.FC = () => {
     return (
         <>
@@ -34,19 +62,22 @@ const MainPage: React.FC = () => {
                         <img width='100%' src={Images.UX_IMAGE} />
                     </StyledImage>
                     <CenterSectionBody>
-                        <h3>UX Design</h3>
-                        <p>The UX (User Experience) design process I follow is a framework that designers use to create products that are useful, usable, and desirable for their users. The process typically consists of several phases, each with its own set of activities, and it can vary slightly depending on the specific project, team, or company.</p>
-                        <StyledOrderedList>
-                            <li>Research: The first step is to understand the user's needs, behaviors, and motivations. This can involve conducting user interviews, surveys, and other forms of user research.</li>
-                            <li>Analysis: Based on the research, the designer analyzes the data to identify patterns and insights that can inform the design.</li>
-                            <li>Ideation: This phase involves brainstorming and generating ideas for the product design. This can be done through sketching, wireframing, and prototyping.</li>
-                            <li>Design: The design phase involves creating a detailed design for the product. This can include visual design, interaction design, and information architecture.</li>
-                            <li>Testing: In this phase, the designer tests the design with real users to see how they interact with it and identify any usability issues.</li>
-                            <li>Iteration: Based on the feedback from testing, the designer makes changes and refines the design. This process may go through several iterations until the design meets the user's needs.</li>
-                            <li>Implementation: Once the design is finalized, it can be implemented in the product. This may involve working with developers to ensure that the design is properly implemented.</li>
-                            <li>Launch: Finally, the product is launched to the public, and the designer monitors its performance and gathers feedback for future improvements.</li>
-                        </StyledOrderedList>
-                        <p>The UX design process is a cyclical process that involves constant iteration and improvement based on user feedback. By following this process, designers can create products that are both effective and enjoyable for their users.</p>
+                        <h2>{UXContent.sectionTitle}</h2>
+                        <p>{UXContent.introduction}</p>
+                        <FeatureList>
+                            { UXContent.feature.map((featureItem) =>
+                                <FeatureItem>
+                                    <FeatureHeading>
+                                        <h3>{featureItem.title}</h3>
+                                    </FeatureHeading>
+                                <FeatureBody>
+                                    {featureItem.body}
+                                </FeatureBody>
+                            </FeatureItem>
+                            )
+                        }
+                        </FeatureList>
+                        <p>{UXContent.conclusion}</p>
                     </CenterSectionBody>
                 </CenterSection>
             </ContentContainer>

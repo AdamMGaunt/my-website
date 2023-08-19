@@ -13,10 +13,9 @@ export const ContentContainer = styled.div`
 `;
 
 export const HeroSection = styled.div`
-    min-height: calc(100vh - 64px);
+    min-height: 300px;
     width: 100%;
     overflow: hidden;
-    background-color: #fff;
     position: relative;
     display: flex;
     justify-content: center;

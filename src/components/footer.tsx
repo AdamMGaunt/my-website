@@ -7,7 +7,7 @@ const MyFooter = styled.div`
   background-color: #282c34;
 `;
 const FooterColumn = styled.div`
-  padding: 1rem;
+  padding: 4rem 1rem;
   text-align: center;
   color: #ffffff;
   font-size: 0.6em;
