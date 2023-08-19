@@ -1,12 +1,22 @@
-import React, {Component } from 'react';
 import styled from 'styled-components';
 
 //components
-import MyAppbar from './appbar';
 import Footer from './footer';
-import ContentBlock from './block';
 import CTA from './cta';
-import { HeroSection, HeroTitle, HeroSubheading, ContentContainer, CenterSection, CenterSectionBody, LeftSection, LeftSectionBody } from './layout';
+import { 
+    HeroSection, 
+    HeroTitle, 
+    HeroSubheading, 
+    ContentContainer, 
+    CenterSection, 
+    CenterSectionBody, 
+    LeftSection, 
+    LeftSectionBody, 
+    Container, 
+    Section 
+} from './layout';
+import MyCard from './card';
+import Appbar from './appbar';
 
 // Content
 import { Projects, CallToAction } from '../content/Projects';
@@ -40,10 +50,9 @@ const StyledOrderedList = styled.ol`
     text-align: left;
 `;
 
-export default function BaseLayout() {
+const BaseLayout: React.FC = () => {
     return (
             <AppContainer>
-                <MyAppbar />
                 <HeroSection>
                     <div className="Colour-Bar"></div>
                     <HeroTitle>
@@ -107,9 +116,15 @@ export default function BaseLayout() {
                     <CenterSection>
                         <h1>Recent Projects</h1>
                     </CenterSection>
-                    <ContentBlock>
-                        {Projects}
-                    </ContentBlock>
+                    <Container>
+                        <Section>
+                            {
+                                Projects.map((project) =>
+                                    <MyCard cardContent={project} />
+                                )
+                            }
+                        </Section>
+                    </Container>
                 </ContentContainer>
                 <ContentContainer>
                     <CTA>
@@ -120,7 +135,7 @@ export default function BaseLayout() {
                     <h3>Contact</h3>
                     <p>Contact form is currently in development :)</p>
                 </ContentContainer>
-                <Footer />
             </AppContainer>
         );
 };
+export default BaseLayout

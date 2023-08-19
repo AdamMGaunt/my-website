@@ -1,12 +1,23 @@
 
-// type ProjectT = {
-//     heading: String;
-//     subheading: String;
-//     bodyContent: String;
-// };
-// type CardContentT = {
-//     projects: ProjectT[];
-// }
+type ProjectT = {
+    heading: String;
+    subheading: String;
+    caption: String;
+    imagePath: String;
+};
+type CardContentT = {
+    projects: ProjectT[];
+}
+
+export const HeroContent = {
+    name: 'Blind Munk Studios',
+    subheading: 'Welcome! I am always updating so check back often'
+}
+
+export const Images = {
+    UX_IMAGE: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/uxdesign.jpg',
+    UI_IMAGE: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/application.jpg'
+}
 
 
 export const Projects = [
@@ -35,5 +46,3 @@ export const CallToAction = {
     body: 'let me know what you think',
     button: 'Contact me'
 }
-
-export default {Projects, CallToAction};
