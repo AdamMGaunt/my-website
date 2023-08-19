@@ -9,6 +9,16 @@ type CardContentT = {
     projects: ProjectT[];
 }
 
+export const HeroContent = {
+    name: 'Blind Munk Studios',
+    subheading: 'Welcome! I am always updating so check back often'
+}
+
+export const Images = {
+    UX_IMAGE: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/uxdesign.jpg',
+    UI_IMAGE: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/application.jpg'
+}
+
 
 export const Projects = [
     {

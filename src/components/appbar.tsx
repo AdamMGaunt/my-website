@@ -29,24 +29,26 @@ const AppBarButton = styled.div`
 const ButtonAppBar: React.FC = () => {
 
   return (
-    <MyAppbar>
-      <AppbarLeft>
-        <AppHeading>
-          Blind Munk Studios
-        </AppHeading>
-      </AppbarLeft>
-      <AppbarRight>
-        <AppBarButton>
-          Focus
-        </AppBarButton>
-        <AppBarButton>
-          Projects
-        </AppBarButton>
-        <AppBarButton>
-          Contact
-        </AppBarButton>
-      </AppbarRight>
-    </MyAppbar>
+    <>
+      <MyAppbar>
+        <AppbarLeft>
+          <AppHeading>
+            Blind Munk Studios
+          </AppHeading>
+        </AppbarLeft>
+        <AppbarRight>
+          <AppBarButton>
+            Focus
+          </AppBarButton>
+          <AppBarButton>
+            Projects
+          </AppBarButton>
+          <AppBarButton>
+            Contact
+          </AppBarButton>
+        </AppbarRight>
+      </MyAppbar>
+    </>
   );
 };
 export default ButtonAppBar;

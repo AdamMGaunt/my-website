@@ -1,4 +1,3 @@
-import React, {Component } from 'react';
 import styled from 'styled-components';
 
 //components
@@ -54,7 +53,6 @@ const StyledOrderedList = styled.ol`
 const BaseLayout: React.FC = () => {
     return (
             <AppContainer>
-                <Appbar/>
                 <HeroSection>
                     <div className="Colour-Bar"></div>
                     <HeroTitle>
@@ -137,7 +135,6 @@ const BaseLayout: React.FC = () => {
                     <h3>Contact</h3>
                     <p>Contact form is currently in development :)</p>
                 </ContentContainer>
-                <Footer />
             </AppContainer>
         );
 };

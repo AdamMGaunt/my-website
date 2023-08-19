@@ -1,20 +1,24 @@
 import * as React from 'react';
-import BaseLayout from './components/baseLayout';
 
-// constants
-// import { MAIN_URL, PROJECTS_URL, ABOUT_URL, CONTACT_URL } from './constants/urls';
+// Pages
+import MainPage from './pages/main';
 
+// Components
+import MyAppbar from './components/appbar';
+import Footer from './components/footer';
+import Hero from './components/Hero';
+
+// CSS
 import './App.scss';
-
-// components
-
-// Content
 
 const App: React.FC = () => {
   
   return (
     <>
-      <BaseLayout />
+      <MyAppbar />
+      <Hero />
+      <MainPage />
+      <Footer />
     </>
   );
 }
