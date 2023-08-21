@@ -10,7 +10,7 @@ import {
 } from '../components/layout';
 
 // Content
-import { UXContent } from '../content/Projects';
+import { UXContent, UIContent } from '../content/Projects';
 
 const StyledImage = styled.div`
     width: 100%;    
@@ -24,8 +24,33 @@ const StyledImage = styled.div`
     }
 `;
 
-const StyledOrderedList = styled.ol`
-    text-align: left;
+const ContentContainerLight = styled.div`
+    margin: 5rem;
+    text-align: center;
+    position: relative;
+    z-index: 9;
+`;
+
+const ContentContainerDark = styled.div`
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    padding-top: 10rem;
+`;
+    
+const RotatedContainer = styled.div`
+    background-color: rgba(0,0,0,0.87);
+    transform: rotate(-7deg);
+    height: 100%;
+    width: 150vw;
+    position: absolute;
+    left: -15%;
+    z-index: 0;
+`;
+
+const ContentDark = styled.div`
+    position: relative;
+    z-index: 9;
 `;
 
 const FeatureList = styled.div`
@@ -34,6 +59,7 @@ const FeatureList = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 `;
 
 const FeatureItem = styled.div`
@@ -42,64 +68,81 @@ const FeatureItem = styled.div`
     justify-content: center;
     max-width: 500px;
     margin: 1rem;
+    z-index: 1;
 `;
 
 const FeatureHeading = styled.div`
     text-align: center;
+    z-index: 1;
 `;
 
 const FeatureBody = styled.div`
     text-align: center;
     max-width: 500px;
+    z-index: 1;
 `;
 
 const MainPage: React.FC = () => {
     return (
         <>
-            <ContentContainer>
-                <CenterSection>
-                    <StyledImage>
-                        <img width='100%' src={Images.UX_IMAGE} />
-                    </StyledImage>
-                    <CenterSectionBody>
-                        <h2>{UXContent.sectionTitle}</h2>
-                        <p>{UXContent.introduction}</p>
-                        <FeatureList>
-                            { UXContent.feature.map((featureItem) =>
-                                <FeatureItem>
-                                    <FeatureHeading>
-                                        <h3>{featureItem.title}</h3>
-                                    </FeatureHeading>
-                                <FeatureBody>
-                                    {featureItem.body}
-                                </FeatureBody>
-                            </FeatureItem>
-                            )
-                        }
-                        </FeatureList>
-                        <p>{UXContent.conclusion}</p>
-                    </CenterSectionBody>
-                </CenterSection>
-            </ContentContainer>
-            <ContentContainer>
-                <CenterSection>
-                    <StyledImage>
-                        <img width='100%' src={Images.UI_IMAGE} />
-                    </StyledImage>
-                    <CenterSectionBody>
-                        <h3>UI Development</h3>
-                        <p>UI (User Interface) development is the process of creating the visual and interactive elements of a digital product, such as a website or mobile app, that users interact with. </p>
-                        <StyledOrderedList>
-                            <li>Design: The first step in UI development is to create a design that meets the product's requirements and user needs. This may involve creating wireframes, mockups, and high-fidelity designs using tools such as Sketch, Adobe XD, or Figma.</li>
-                            <li>Front-end development: Once the design is finalized, the front-end development process begins. This involves coding the visual and interactive elements of the product using HTML, CSS, and JavaScript. Front-end developers may use frameworks and libraries such as React, Vue, or Angular to speed up the development process.</li>
-                            <li>Testing: After the front-end development is complete, the product is tested to ensure that it functions as intended and is compatible with different devices and browsers. Testing may involve manual testing, automated testing, or both.</li>
-                            <li>Deployment: Once testing is complete, the product is deployed to a live environment where it can be accessed by users. Deployment may involve setting up servers, configuring databases, and other tasks.</li>
-                            <li>Maintenance: After deployment, the UI development process may still require ongoing maintenance to ensure that the product remains up-to-date, secure, and performs well.</li>
-                        </StyledOrderedList>
-                        <p>UI development is an essential part of creating a digital product that is both functional and visually appealing. By following a structured development process, UI developers can create products that meet user needs and business requirements.</p>
-                    </CenterSectionBody>
-                </CenterSection>
-            </ContentContainer>
+            <ContentContainerLight>
+                <h1>Methodology</h1>
+                <ContentContainer>
+                    <CenterSection>
+                        <StyledImage>
+                            <img width='100%' src={Images.UX_IMAGE} />
+                        </StyledImage>
+                        <CenterSectionBody>
+                            <h2>{UXContent.sectionTitle}</h2>
+                            <p>{UXContent.introduction}</p>
+                            <FeatureList>
+                                { UXContent.feature.map((featureItem) => 
+                                    <FeatureItem key={featureItem.key}>
+                                        <FeatureHeading>
+                                            <h3>{featureItem.title}</h3>
+                                        </FeatureHeading>
+                                    <FeatureBody>
+                                        {featureItem.body}
+                                    </FeatureBody>
+                                </FeatureItem>
+                                )
+                            }
+                            </FeatureList>
+                            <p>{UXContent.conclusion}</p>
+                        </CenterSectionBody>
+                    </CenterSection>
+                </ContentContainer>
+            </ContentContainerLight>
+            <ContentContainerDark>
+                <RotatedContainer />
+                <ContentDark>
+                    <ContentContainer>
+                        <CenterSection>
+                            <StyledImage>
+                                <img width='100%' src={Images.UI_IMAGE} />
+                            </StyledImage>
+                            <CenterSectionBody>
+                                <h2>{UIContent.sectionTitle}</h2>
+                                <p>{UIContent.introduction}</p>
+                                <FeatureList>
+                                    { UIContent.feature.map((featureItem) =>
+                                        <FeatureItem key={featureItem.key}>
+                                            <FeatureHeading>
+                                                <h3>{featureItem.title}</h3>
+                                            </FeatureHeading>
+                                        <FeatureBody>
+                                            {featureItem.body}
+                                        </FeatureBody>
+                                    </FeatureItem>
+                                    )
+                                }
+                                </FeatureList>
+                                <p>{UIContent.conclusion}</p>
+                            </CenterSectionBody>
+                        </CenterSection>
+                    </ContentContainer>
+                </ContentDark>
+            </ContentContainerDark>
         </>
         )
 };

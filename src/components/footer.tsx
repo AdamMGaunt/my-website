@@ -5,6 +5,9 @@ const MyFooter = styled.div`
   display: grid;
   justify-content: center;
   background-color: #282c34;
+  width: 100vw;
+  position: realtive;
+  z-index: 1;
 `;
 const FooterColumn = styled.div`
   padding: 4rem 1rem;

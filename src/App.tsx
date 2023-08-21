@@ -8,6 +8,7 @@ import MainPage from './pages/main';
 import MyAppbar from './components/appbar';
 import Footer from './components/footer';
 import Hero from './components/Hero';
+import FeatureGrid from './components/FeatureGrid';
 
 // Content
 import { Images } from './content/Projects';
@@ -17,8 +18,21 @@ import './App.scss';
 
 const ApplicationContainer = styled.div `
   background-image: url(${Images.BackgroundImage});
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
+  bockground-color: #000000;
   postion: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+`;
+
+const Overlay = styled.div`
+  background-color: rgba(255,255,255,0.87);
+  position: absolute;
+  height: 100%;
+  width: 100%;
 `;
 
 const App: React.FC = () => {
@@ -27,7 +41,9 @@ const App: React.FC = () => {
     <>
       <MyAppbar />
       <ApplicationContainer>
+        <Overlay />
         <Hero />
+        <FeatureGrid />
         <MainPage />
         <Footer />
       </ApplicationContainer>
