@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from "react";
 import styled from 'styled-components';
 
 const DefaultButton = styled.button`
@@ -11,9 +11,10 @@ const DefaultButton = styled.button`
 
 type ButtonT = {
   children: React.ReactNode;
+  onClick: () => void;
 }
 
-const Button: React.FC = ({children}) => {
+const Button: React.FC<ButtonT> = ({children}) => {
   return (
     <DefaultButton>{children}</DefaultButton>
   );

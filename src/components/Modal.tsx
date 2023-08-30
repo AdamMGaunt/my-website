@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import styled from "styled-components";
 
 const ModalBackground = styled.div`
@@ -25,7 +25,7 @@ type ModalT = {
   onCloseModal: () => void;
   children: React.ReactNode;
 }
-const Modal: React.FC = ({ children, onCloseModal }) => {  
+const Modal: React.FC<ModalT> = ({ children, onCloseModal }) => {  
 
   return (
     <>
