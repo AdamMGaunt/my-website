@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 // Constants
@@ -14,15 +13,17 @@ export const ContentContainer = styled.div`
 `;
 
 export const HeroSection = styled.div`
-    min-height: calc(100vh - 64px);
+    min-height: 300px;
     width: 100%;
     overflow: hidden;
-    background-color: #fff;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    @media (max-width: 768px) {
+        height: calc(100Vh - 96px);
+      }
 `;
 
 export const HeroTitle = styled.h1`
