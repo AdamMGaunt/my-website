@@ -1,8 +1,11 @@
 import * as React from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 
+// Components
 import { Projects } from "../content/Projects";
-import { url } from "inspector";
+import Modal from "./Modal";
+import Button from '../components/Button';
 
 const MyGrid = styled.div`
   display: grid;
@@ -31,22 +34,113 @@ const GridItemContent = styled.div`
   width: 100%;
 `;
 
-const FeatureGrid: React.FC = () => {
+const ModalContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+`;
+
+const ModalContent = styled.div`
+
+`;
+
+const ModalImage = styled.div`   
+  height: auto;
+  padding: 1rem;
+  img {    
+      width: 50vw;
+      @media (max-width: 768px) {
+          width: 100%;
+      }
+  }
+`;
+const ModalActions = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+`;
+
+const ModalTop = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  width: 100%;
+`;
+
+const Divider = styled.div`
+  border-right: 1px solid #1e1e1e;
+  height: 100%;
+`;
+
+type MyProjectT = {
+  key: number,
+  imagePath: string,
+  heading: string,
+  subheading: string,
+  caption: string,
+  description: string
+}
+
+const FeatureGrid: React.FC<MyProjectT> = () => {
+  const [ project, setProject ] = useState<MyProjectT>();
+  const [ showModal, setShowModal ] = useState(false);
+
+  useEffect(() => {
+    setProject(project);
+  })
+
+  const onCloseModal = () => {
+    setShowModal(false);
+  }
+
   return(
     <>
+    {showModal && project &&(
+      <Modal onCloseModal={onCloseModal}>
+        <ModalContentWrapper>
+          <ModalTop>
+            <Button onClick={onCloseModal}>close</Button>
+          </ModalTop>
+          <ModalImage>
+            <img width='100%' src={project.imagePath} />
+          </ModalImage>
+          <ModalContent>
+            <h3>{project.heading}</h3>
+            <h4>{project.subheading}</h4>
+            <p>{project.caption}</p>
+            <p>{project.description}</p>
+          </ModalContent>
+          <ModalActions>
+            <Button onClick={onCloseModal}>prev</Button>
+            <Divider/>
+            <Button onClick={onCloseModal}>next</Button>
+          </ModalActions>
+        </ModalContentWrapper>
+      </Modal>
+    )}
       <MyGrid>
-        {Projects.map((ProjectFeature) =>
-          <GridItem key={ProjectFeature.key} style={{
-            backgroundImage: `url(${ProjectFeature.imagePath})`
-          }}>
-            <GridItemContent>
-              <h3>{ProjectFeature.heading}</h3>
-              <h4>{ProjectFeature.subheading}</h4>
-              <p>{ProjectFeature.caption}</p>
-            </GridItemContent>
-          </GridItem>
-        )
-        }
+        {Projects.map((ProjectFeature) => {
+          const { key, imagePath, heading, subheading, caption } = ProjectFeature;
+          return (
+            <GridItem key={key} onClick={() => {
+              setProject(ProjectFeature);
+              setShowModal(true);
+            }}
+            style={{
+              backgroundImage: `url(${imagePath})`
+            }}>
+              <GridItemContent>
+                <h3>{heading}</h3>
+                <h4>{subheading}</h4>
+                <p>{caption}</p>
+              </GridItemContent>
+            </GridItem>
+          );
+        })}
       </MyGrid>
     </>
   )

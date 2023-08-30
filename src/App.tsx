@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 
 // Pages
@@ -9,6 +10,8 @@ import MyAppbar from './components/appbar';
 import Footer from './components/footer';
 import Hero from './components/Hero';
 import FeatureGrid from './components/FeatureGrid';
+import Modal from './components/Modal';
+import Contact from './components/Contact';
 
 // Content
 import { Images } from './content/Projects';
@@ -45,6 +48,7 @@ const App: React.FC = () => {
         <Hero />
         <FeatureGrid />
         <MainPage />
+        <Contact />
         <Footer />
       </ApplicationContainer>
     </>

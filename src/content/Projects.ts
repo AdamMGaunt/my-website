@@ -107,6 +107,7 @@ export const Projects = [
         heading: 'Logistics Management Web Application',
         subheading: 'UX Design & UI Development',
         caption: "Figma, ACS, Blazor, Typescript, Azure DevOPS",
+        description: "Here is a description of the project",
         imagePath: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/logistics.jpg'
     },
     {
@@ -114,6 +115,7 @@ export const Projects = [
         heading: 'Pipeline Triage Application',
         subheading: 'UI Development',
         caption: "Angular, Typescript, Azure DevOPS",
+        description: "Here is a description of the project",
         imagePath: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/security.jpg'
     },
     {
@@ -121,6 +123,7 @@ export const Projects = [
         heading: 'Pipeline Flow Management Application',
         subheading: 'UX Design',
         caption: "Figma, ACS, React",
+        description: "Here is a description of the project",
         imagePath: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/monitoring.jpg'
     },
     {
@@ -128,6 +131,7 @@ export const Projects = [
         heading: 'Internal Logistics Management Software Assessment Roadmap',
         subheading: 'UX Design, Business Analysis',
         caption: "User Journey, UX Mapping, Application Analysis",
+        description: "Here is a description of the project",
         imagePath: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/monitoring.jpg'
     },
     {
@@ -135,6 +139,7 @@ export const Projects = [
         heading: 'Railway Pipeline and cycle reporting system',
         subheading: 'UX Design',
         caption: "Figma, ACS, React",
+        description: "Here is a description of the project",
         imagePath: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/monitoring.jpg'
     },
     {
@@ -142,6 +147,7 @@ export const Projects = [
         heading: 'Interactive Touchscreen Interface',
         subheading: 'UX Design, UI development, Lead Developer',
         caption: "Figma, React, Typescript",
+        description: "Here is a description of the project",
         imagePath: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/monitoring.jpg'
     }
 ];
