@@ -101,7 +101,7 @@ type MyProjectT = {
   description: string
 }
 
-const FeatureGrid: React.FC<MyProjectT> = () => {
+const FeatureGrid: React.FC = () => {
   const [ project, setProject ] = useState<MyProjectT>();
   const [ showModal, setShowModal ] = useState(false);
 
