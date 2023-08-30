@@ -12,7 +12,6 @@ const Hero: React.FC = () => {
     return (
         <>
             <HeroSection>
-                <div className="Colour-Bar"></div>
                 <HeroTitle>
                     {HeroContent.name}
                 </HeroTitle>
