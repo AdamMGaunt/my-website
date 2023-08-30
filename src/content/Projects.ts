@@ -11,7 +11,7 @@ type CardContentT = {
 
 export const HeroContent = {
     name: 'Blind Munk Studios',
-    subheading: 'Projects'
+    subheading: 'User Expereince Design & User Interface Development'
 }
 
 export const Images = {

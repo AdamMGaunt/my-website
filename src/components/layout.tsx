@@ -21,6 +21,9 @@ export const HeroSection = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    @media (max-width: 768px) {
+        height: calc(100Vh - 96px);
+      }
 `;
 
 export const HeroTitle = styled.h1`

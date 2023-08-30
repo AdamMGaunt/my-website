@@ -29,6 +29,9 @@ const ContentContainerLight = styled.div`
     text-align: center;
     position: relative;
     z-index: 9;
+    @media (max-width: 768px) {
+        margin: 1rem;
+      }
 `;
 
 const ContentContainerDark = styled.div`
@@ -40,11 +43,9 @@ const ContentContainerDark = styled.div`
     
 const RotatedContainer = styled.div`
     background-color: rgba(0,0,0,0.87);
-    transform: rotate(-7deg);
     height: 100%;
     width: 150vw;
     position: absolute;
-    left: -15%;
     z-index: 0;
 `;
 

@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
     return (
       <MyFooter>
           <FooterColumn>
-            <h5>Designed & Developed</h5>
+            <h5>Designed & Developed by Blind Munk Studios</h5>
             <p>Copyright Blind Munk Studios 2023</p>
           </FooterColumn>
       </MyFooter>
