@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Images } from '../content/Projects';
 
 // Constants
 
@@ -14,7 +15,11 @@ export const ContentContainer = styled.div`
 
 export const HeroSection = styled.div`
     min-height: 300px;
+    background-image: url(${Images.BackgroundImage});
+    background-position: center;
+    background-size: cover;
     width: 100%;
+    height: calc(100Vh - 72px);
     overflow: hidden;
     position: relative;
     display: flex;
@@ -22,8 +27,8 @@ export const HeroSection = styled.div`
     align-items: center;
     flex-direction: column;
     @media (max-width: 768px) {
-        height: calc(100Vh - 96px);
-      }
+        height: calc(100Vh - 72px);
+    }
 `;
 
 export const HeroTitle = styled.h1`
@@ -77,6 +82,9 @@ export const CenterSection = styled.div`
 export const CenterSectionBody = styled.div`
     margin-left: 3rem;
     margin-right: 3rem;
+    @media (max-width: 768px) {
+        margin: 0;
+      }
 `;
 
 export const LeftSection = styled.div`
@@ -92,4 +100,9 @@ export const LeftSection = styled.div`
 export const LeftSectionBody = styled.div`
     margin-left: 3rem;
     margin-right: 3rem;
+`;
+
+export const Divider = styled.div`
+  border-right: 1px solid #404040;
+  height: 100%;
 `;

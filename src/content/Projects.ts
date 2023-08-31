@@ -107,7 +107,7 @@ export const Projects = [
         heading: 'Logistics Management Web Application',
         subheading: 'UX Design & UI Development',
         caption: "Figma, ACS, Blazor, Typescript, Azure DevOPS",
-        description: "Here is a description of the project",
+        description: "The Bulk Commodity Logistics Management Application streamlines the transport, storage, and handling of large-scale commodities. Tailored for industries dealing in high-volume goods like grains, minerals, and coal, this tool offers real-time tracking, inventory management, and route optimization. Integrating advanced analytics and intuitive dashboards, it ensures timely deliveries, minimizes operational costs, and enhances the efficiency of the entire commodity supply chain.",
         imagePath: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/logistics.jpg'
     },
     {
@@ -115,7 +115,7 @@ export const Projects = [
         heading: 'Pipeline Triage Application',
         subheading: 'UI Development',
         caption: "Angular, Typescript, Azure DevOPS",
-        description: "Here is a description of the project",
+        description: "The Pipeline Triage Application is a specialized tool designed to monitor, diagnose, and manage the health of oil pipelines. Through a user-friendly interface, it provides real-time insights into pipeline performance, detects potential disruptions, and assists in swift issue resolution. Combining advanced sensor data with analytical capabilities, it ensures the efficient and safe operation of critical oil transport infrastructure, minimizing environmental and operational risks.",
         imagePath: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/security.jpg'
     },
     {
@@ -123,7 +123,7 @@ export const Projects = [
         heading: 'Pipeline Flow Management Application',
         subheading: 'UX Design',
         caption: "Figma, ACS, React",
-        description: "Here is a description of the project",
+        description: "The Pipeline Flow Management Application is an advanced solution crafted for overseeing and optimizing fluid flow within pipelines. Suitable for industries like oil, gas, or water distribution, it offers real-time monitoring, pressure control, and leakage detection. Through its intuitive interface, users gain deep insights into flow rates, volume, and potential disruptions, ensuring safety, efficiency, and continuity in critical pipeline operations.",
         imagePath: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/monitoring.jpg'
     },
     {
@@ -131,15 +131,15 @@ export const Projects = [
         heading: 'Internal Logistics Management Software Assessment Roadmap',
         subheading: 'UX Design, Business Analysis',
         caption: "User Journey, UX Mapping, Application Analysis",
-        description: "Here is a description of the project",
+        description: "The Internal Logistics Management Software Assessment Roadmap is a strategic guide designed to evaluate, streamline, and enhance in-house logistics software systems. By addressing critical touchpoints such as workflow efficiency, system integrations, and user experience, this roadmap plots a clear path for organizations to identify gaps, implement improvements, and achieve optimized logistical operations, driving both performance and profitability.",
         imagePath: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/monitoring.jpg'
     },
     {
         key: 5,
-        heading: 'Railway Pipeline and cycle reporting system',
+        heading: 'Railway Fleet Management Power App',
         subheading: 'UX Design',
         caption: "Figma, ACS, React",
-        description: "Here is a description of the project",
+        description: "The Railway Fleet Management Power App is a dynamic and comprehensive solution tailored for the efficient management of railway rolling stock. Leveraging the power of modern digital tools, it provides real-time insights into the status, location, and health of each vehicle within a fleet. From locomotives to passenger cars and freight wagons, this app ensures timely maintenance, route optimization, and operational coordination. Its intuitive interface paired with powerful analytics makes it an indispensable tool for modern railway operations, promoting safety, punctuality, and cost-effective fleet management.",
         imagePath: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/monitoring.jpg'
     },
     {
@@ -147,7 +147,7 @@ export const Projects = [
         heading: 'Interactive Touchscreen Interface',
         subheading: 'UX Design, UI development, Lead Developer',
         caption: "Figma, React, Typescript",
-        description: "Here is a description of the project",
+        description: "The Interactive Touchscreen Interface for Virtual Reception revolutionizes the visitor experience by combining state-of-the-art technology with user-centric design. Upon arrival, guests are greeted by a sleek, high-resolution display that seamlessly guides them through their check-in process. Features include facial recognition for swift identification, a virtual assistant with voice and gesture recognition for queries, and a dynamic directory for easy navigation. Integrated with real-time notifications, it promptly alerts the respective personnel of a visitor's arrival. Whether for an office, hotel, or event space, this interface streamlines visitor management, elevates brand presentation, and ensures every guest feels both welcomed and empowered.",
         imagePath: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/monitoring.jpg'
     }
 ];

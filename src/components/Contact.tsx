@@ -9,6 +9,7 @@ const ContactSection = styled.div`
   align-items: center;
   padding: 3rem 1rem;
   margin: 3rem 1rem;
+  height: 80vh;
   z-index: 1;
   background-color: #ffffff;
 `;
