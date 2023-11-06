@@ -7,7 +7,7 @@ import { Projects } from "../content/Projects";
 import Modal from "./Modal";
 import Button from '../components/Button';
 
-import { Divider, ContentContainer } from "./layout";
+import { DividerVertical, ContentContainer } from "./layout";
 
 const ProjectSection = styled.div`
   z-index: 1;
@@ -16,6 +16,17 @@ const ProjectSection = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+`;
+
+const ProjectHeader = styled.div`
+  z-index: 1;
+  position: relative;
+  display: flex;
+  margin-top: 80px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 `;
 
 const MyGrid = styled.div`
@@ -122,7 +133,6 @@ const FeatureGrid: React.FC = () => {
         <Modal onCloseModal={onCloseModal}>
           <ModalContentWrapper>
             <ModalTop>
-              <Button onClick={onCloseModal}>close</Button>
             </ModalTop>
             <ModalContent>
               <ModalImage>
@@ -137,15 +147,20 @@ const FeatureGrid: React.FC = () => {
             </ModalContent>
             <ModalActions>
               <Button onClick={onCloseModal}>prev</Button>
-              <Divider/>
+              <DividerVertical/>
+              <Button onClick={onCloseModal}>close</Button>
+              <DividerVertical/>
               <Button onClick={onCloseModal}>next</Button>
             </ModalActions>
           </ModalContentWrapper>
         </Modal>
       )}
-      <ContentContainer>
-        <ProjectSection>
+      <ContentContainer id="Projects">
+        <ProjectHeader >
           <h1>Projects</h1>
+          <p>Below is a list of recent projects I have been working on.  Each project had different requriements based on the client, development envirionment or project scope.</p>
+        </ProjectHeader>
+        <ProjectSection>
           <MyGrid>
             {Projects.map((ProjectFeature) => {
               const { key, imagePath, heading, subheading, caption } = ProjectFeature;

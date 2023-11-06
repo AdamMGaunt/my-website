@@ -8,6 +8,10 @@ const AppHeading = styled.div`
   font-weight: 100;
   font-size: 16px;
   color: #000000;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 `;
 
 const MyAppbar = styled.div`
@@ -38,6 +42,10 @@ const AppbarRight = styled.div`
 
 const AppBarButton = styled.div`
   margin: 0 8px;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 `;
 
 const ButtonAppBar: React.FC = () => {
@@ -46,18 +54,31 @@ const ButtonAppBar: React.FC = () => {
     <MyAppbar>
       <AppbarLeft>
         <AppHeading>
-          Blind Munk Studios
+          <a href="/">
+            Blind Munk Studios
+          </a>
         </AppHeading>
       </AppbarLeft>
       <AppbarRight>
-        <AppBarButton>
-          Projects
+      <AppBarButton>
+          <a href="#About">
+            About
+          </a>
         </AppBarButton>
         <AppBarButton>
-          Methodology
+          <a href="#Projects">
+            Projects
+          </a>
         </AppBarButton>
         <AppBarButton>
-          Contact
+        <a href="#Methodology">
+            Methodology
+          </a>
+        </AppBarButton>
+        <AppBarButton>
+        <a href="#Contact">
+            Contact
+          </a>
         </AppBarButton>
       </AppbarRight>
     </MyAppbar>

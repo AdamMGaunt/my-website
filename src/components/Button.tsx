@@ -10,7 +10,7 @@ const DefaultButton = styled.button`
 `;
 
 type ButtonT = {
-  children: React.ReactNode;
+  children: any;
   onClick: () => void;
 }
 

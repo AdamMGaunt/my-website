@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 // Pages
 import MainPage from './pages/main';
+import About from './pages/about';
 
 // Components
 import MyAppbar from './components/appbar';
@@ -19,17 +20,17 @@ import { Images } from './content/Projects';
 // CSS
 import './App.scss';
 
-const ApplicationContainer = styled.div `
-  background-image: url(${Images.BackgroundImage});
-  background-repeat: repeat-y;
-  bockground-color: #000000;
-  postion: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-`;
+// const ApplicationContainer = styled.div `
+//   background-image: url(${Images.BackgroundImage});
+//   background-repeat: repeat-y;
+//   bockground-color: #000000;
+//   postion: relative;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   position: relative;
+// `;
 
 const Overlay = styled.div`
   background-color: rgba(255,255,255,0.87);
@@ -43,14 +44,15 @@ const App: React.FC = () => {
   return (
     <>
       <MyAppbar />
-      <ApplicationContainer>
+      {/* <ApplicationContainer> */}
         <Overlay />
         <Hero />
+        <About />
         <FeatureGrid />
         <MainPage />
         <Contact />
         <Footer />
-      </ApplicationContainer>
+      {/* </ApplicationContainer> */}
     </>
   );
 }

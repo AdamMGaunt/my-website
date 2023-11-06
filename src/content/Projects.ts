@@ -11,13 +11,20 @@ type CardContentT = {
 
 export const HeroContent = {
     name: 'Blind Munk Studios',
-    subheading: 'User Expereince Design & User Interface Development'
+    subheading: 'UI|UX Design | UI Development | Product Design'
 }
 
 export const Images = {
     UX_IMAGE: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/uxdesign.jpg',
     UI_IMAGE: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/application.jpg',
-    BackgroundImage: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/WebsiteBackground.png'
+    BackgroundImage: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/WebsiteBackground.png',
+    Background: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/Background.png',
+    Personas: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/Persona.png',
+    UserJourney: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/UserJourney.png',
+    Wireframes: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/Wireframe.png',
+    UXMapping01: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/UXMapping01.png', 
+    UXMapping02: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/UXMapping02.png', 
+    UXMapping03: 'https://blindmunkstudios.s3.us-west-2.amazonaws.com/UXMapping03.png'
 }
 
 export const UXContent = {

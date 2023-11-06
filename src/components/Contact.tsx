@@ -2,6 +2,7 @@ import * as React from "react";
 import styled from 'styled-components';
 
 import Button from './Button';
+import { DividerHorizontal, ContentHeader } from "./layout";
 
 const ContactSection = styled.div`
   display: flex;
@@ -45,8 +46,11 @@ const Contact: React.FC = () => {
 
   return (
     <>
-      <ContactSection>
-        <h2>Contact</h2>
+      <ContactSection id="Contact">
+        <ContentHeader>
+          <h2>Contact</h2>
+          <DividerHorizontal />
+        </ContentHeader>
         <p>Send me a quick message about your needs</p>
         <ContactForm>
           <FormInput id='name' type='text' />
