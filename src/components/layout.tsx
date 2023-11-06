@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Images } from '../content/Projects';
 
 // Constants
 
@@ -14,7 +15,11 @@ export const ContentContainer = styled.div`
 
 export const HeroSection = styled.div`
     min-height: 300px;
+    background-image: url(${Images.BackgroundImage});
+    background-position: center;
+    background-size: cover;
     width: 100%;
+    height: calc(100Vh - 72px);
     overflow: hidden;
     position: relative;
     display: flex;
@@ -22,8 +27,8 @@ export const HeroSection = styled.div`
     align-items: center;
     flex-direction: column;
     @media (max-width: 768px) {
-        height: calc(100Vh - 96px);
-      }
+        height: calc(100Vh - 72px);
+    }
 `;
 
 export const HeroTitle = styled.h1`
@@ -75,8 +80,12 @@ export const CenterSection = styled.div`
 `;
     
 export const CenterSectionBody = styled.div`
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin: 3rem;
+    max-width: 75vw;
+    @media (max-width: 768px) {
+        max-width: 100vw;
+        margin: 0;
+      }
 `;
 
 export const LeftSection = styled.div`
@@ -92,4 +101,27 @@ export const LeftSection = styled.div`
 export const LeftSectionBody = styled.div`
     margin-left: 3rem;
     margin-right: 3rem;
+`;
+
+export const DividerHorizontal = styled.div`
+  border-bottom: 1px solid #d4d4d4;
+  width: 100%;
+`;
+
+export const DividerHorizontalDark = styled.div`
+  border-bottom: 1px solid #efefef;
+  width: 100%;
+`;
+
+export const DividerVertical = styled.div`
+  border-right: 1px solid #d4d4d4;
+  height: 100%;
+`;
+
+export const ContentHeader = styled.div`
+    margin-top: 80px;
+    padding: 0.5rem 1rem;
+    h2 {
+        padding: 0 1rem;
+    }
 `;

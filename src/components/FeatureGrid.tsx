@@ -7,6 +7,8 @@ import { Projects } from "../content/Projects";
 import Modal from "./Modal";
 import Button from '../components/Button';
 
+import { DividerVertical, ContentContainer } from "./layout";
+
 const ProjectSection = styled.div`
   z-index: 1;
   position: relative;
@@ -14,6 +16,17 @@ const ProjectSection = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+`;
+
+const ProjectHeader = styled.div`
+  z-index: 1;
+  position: relative;
+  display: flex;
+  margin-top: 80px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 `;
 
 const MyGrid = styled.div`
@@ -31,7 +44,7 @@ const MyGrid = styled.div`
 
 const GridItem = styled.div`
   width: 100%;
-  height: 750px;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,14 +73,20 @@ const ModalContentWrapper = styled.div`
 `;
 
 const ModalContent = styled.div`
-
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  overflow-y: scroll;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const ModalImage = styled.div`   
   height: auto;
   padding: 1rem;
   img {    
-      width: 50vw;
+      width: 40vw;
       @media (max-width: 768px) {
           width: 100%;
       }
@@ -85,11 +104,6 @@ const ModalTop = styled.div`
   justify-content: flex-end;
   padding: 1rem;
   width: 100%;
-`;
-
-const Divider = styled.div`
-  border-right: 1px solid #1e1e1e;
-  height: 100%;
 `;
 
 type MyProjectT = {
@@ -119,48 +133,56 @@ const FeatureGrid: React.FC = () => {
         <Modal onCloseModal={onCloseModal}>
           <ModalContentWrapper>
             <ModalTop>
-              <Button onClick={onCloseModal}>close</Button>
             </ModalTop>
-            <ModalImage>
-              <img width='100%' src={project.imagePath} />
-            </ModalImage>
             <ModalContent>
-              <h3>{project.heading}</h3>
-              <h4>{project.subheading}</h4>
-              <p>{project.caption}</p>
-              <p>{project.description}</p>
+              <ModalImage>
+                <img width='100%' src={project.imagePath} />
+              </ModalImage>
+              <div>
+                <h3>{project.heading}</h3>
+                <h4>{project.subheading}</h4>
+                <p>{project.caption}</p>
+                <p>{project.description}</p>
+              </div>
             </ModalContent>
             <ModalActions>
               <Button onClick={onCloseModal}>prev</Button>
-              <Divider/>
+              <DividerVertical/>
+              <Button onClick={onCloseModal}>close</Button>
+              <DividerVertical/>
               <Button onClick={onCloseModal}>next</Button>
             </ModalActions>
           </ModalContentWrapper>
         </Modal>
       )}
-      <ProjectSection>
-        <h1>Projects</h1>
-        <MyGrid>
-          {Projects.map((ProjectFeature) => {
-            const { key, imagePath, heading, subheading, caption } = ProjectFeature;
-            return (
-              <GridItem key={key} onClick={() => {
-                setProject(ProjectFeature);
-                setShowModal(true);
-              }}
-              style={{
-                backgroundImage: `url(${imagePath})`
-              }}>
-                <GridItemContent>
-                  <h3>{heading}</h3>
-                  <h4>{subheading}</h4>
-                  <p>{caption}</p>
-                </GridItemContent>
-              </GridItem>
-            );
-          })}
-        </MyGrid>
-      </ProjectSection>
+      <ContentContainer id="Projects">
+        <ProjectHeader >
+          <h1>Projects</h1>
+          <p>Below is a list of recent projects I have been working on.  Each project had different requriements based on the client, development envirionment or project scope.</p>
+        </ProjectHeader>
+        <ProjectSection>
+          <MyGrid>
+            {Projects.map((ProjectFeature) => {
+              const { key, imagePath, heading, subheading, caption } = ProjectFeature;
+              return (
+                <GridItem key={key} onClick={() => {
+                  setProject(ProjectFeature);
+                  setShowModal(true);
+                }}
+                style={{
+                  backgroundImage: `url(${imagePath})`
+                }}>
+                  <GridItemContent>
+                    <h3>{heading}</h3>
+                    <h4>{subheading}</h4>
+                    <p>{caption}</p>
+                  </GridItemContent>
+                </GridItem>
+              );
+            })}
+          </MyGrid>
+        </ProjectSection>
+      </ContentContainer>
     </>
   )
 }
