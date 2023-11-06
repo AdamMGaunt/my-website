@@ -80,9 +80,10 @@ export const CenterSection = styled.div`
 `;
     
 export const CenterSectionBody = styled.div`
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin: 3rem;
+    max-width: 75vw;
     @media (max-width: 768px) {
+        max-width: 100vw;
         margin: 0;
       }
 `;
@@ -102,7 +103,25 @@ export const LeftSectionBody = styled.div`
     margin-right: 3rem;
 `;
 
-export const Divider = styled.div`
-  border-right: 1px solid #404040;
+export const DividerHorizontal = styled.div`
+  border-bottom: 1px solid #d4d4d4;
+  width: 100%;
+`;
+
+export const DividerHorizontalDark = styled.div`
+  border-bottom: 1px solid #efefef;
+  width: 100%;
+`;
+
+export const DividerVertical = styled.div`
+  border-right: 1px solid #d4d4d4;
   height: 100%;
+`;
+
+export const ContentHeader = styled.div`
+    margin-top: 80px;
+    padding: 0.5rem 1rem;
+    h2 {
+        padding: 0 1rem;
+    }
 `;

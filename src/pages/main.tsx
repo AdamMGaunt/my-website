@@ -7,6 +7,9 @@ import {
     ContentContainer, 
     CenterSection, 
     CenterSectionBody, 
+    ContentHeader,
+    DividerHorizontal,
+    DividerHorizontalDark
 } from '../components/layout';
 
 // Content
@@ -39,6 +42,9 @@ const ContentContainerDark = styled.div`
     position: relative;
     overflow: hidden;
     padding-top: 10rem;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
 `;
     
 const RotatedContainer = styled.div`
@@ -82,19 +88,28 @@ const FeatureBody = styled.div`
     max-width: 500px;
     z-index: 1;
 `;
+const MethodologyHeader = styled.div`
+    margin-top: 80px;
+`;
 
 const MainPage: React.FC = () => {
     return (
         <>
-            <ContentContainerLight>
-                <h1>Methodology</h1>
+            <ContentContainerLight id="Methodology">
                 <ContentContainer>
+                    <ContentHeader>
+                        <h1>Methodology</h1>
+                        <DividerHorizontal />
+                    </ContentHeader>
                     <CenterSection>
                         <StyledImage>
                             <img width='100%' src={Images.UX_IMAGE} />
                         </StyledImage>
                         <CenterSectionBody>
-                            <h2>{UXContent.sectionTitle}</h2>
+                            <ContentHeader>
+                                <h2>{UXContent.sectionTitle}</h2>
+                                <DividerHorizontal />
+                            </ContentHeader>
                             <p>{UXContent.introduction}</p>
                             <FeatureList>
                                 { UXContent.feature.map((featureItem) => 
@@ -123,7 +138,10 @@ const MainPage: React.FC = () => {
                                 <img width='100%' src={Images.UI_IMAGE} />
                             </StyledImage>
                             <CenterSectionBody>
-                                <h2>{UIContent.sectionTitle}</h2>
+                                <ContentHeader>
+                                    <h2>{UIContent.sectionTitle}</h2>
+                                    <DividerHorizontalDark />
+                                </ContentHeader>
                                 <p>{UIContent.introduction}</p>
                                 <FeatureList>
                                     { UIContent.feature.map((featureItem) =>
